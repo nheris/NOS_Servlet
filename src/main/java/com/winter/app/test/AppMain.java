@@ -10,13 +10,21 @@ import com.winter.app.views.View;
 
 public class AppMain {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		DepartmentDAO dao = new DepartmentDAO();
 		RegionDAO regionDAO = new RegionDAO();
 		View view = new View();
 		try {
-			 List<RegionDTO> ar = regionDAO.getList();
-			 view.view(ar);
+			 RegionDTO regionDTO = new RegionDTO();
+			 regionDTO.setRegion_id(6);
+			 regionDTO = regionDAO.getDetail(regionDTO);
+			 
+			 if(regionDTO!=null) {
+				 System.out.println(regionDTO.getRegion_name());
+			 }else {
+				 System.out.println("없는 ID");
+			 }
+			 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
