@@ -9,7 +9,7 @@ import java.util.List;
 import com.winter.app.util.DBConnector;
 
 public class DepartmentDAO {
-	//getDetail, 부서번호로 부서정보 조회
+	//getDetail, 부서번호로 부서정보 조회 ㅎ
 	private void getDetail() {
 		
 	}
