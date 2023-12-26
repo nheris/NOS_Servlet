@@ -22,7 +22,7 @@
 	<h1>Region Detail</h1>
 	<h3><%= regionDTO.getRegion_name() %></h3>
 	<input id="rId" type="hidden" value="<%= regionDTO.getRegion_id()%>">
-	<button id="gtn">수정</button>
+	<button id="btn" >수정</button>
 	<a href="./update.jsp?region_id=<%= regionDTO.getRegion_id()%>">수정폼 이동</a>
 	
 	<script type="text/javascript">
