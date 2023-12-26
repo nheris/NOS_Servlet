@@ -35,7 +35,7 @@ public class RegionDAO {
 		//코드 중복되니 제거
 		Connection con = DBConnector.getConnector();
 		
-		String sql = "ELECT * FROM REGIONS";
+		String sql = "SELECT * FROM REGIONS";
 	
 		PreparedStatement st = con.prepareStatement(sql);
 		

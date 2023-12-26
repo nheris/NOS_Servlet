@@ -15,13 +15,18 @@ public class DBConnector{
 		
 		Class.forName(driver);
 		Connection con = DriverManager.getConnection(url, user, password);
-		System.out.println(con);
+//		System.out.println(con);
 		
 		return con;
 	}
 	
 	public static void disConnect(ResultSet rs,PreparedStatement st, Connection con) throws Exception {
 		rs.close();
+		st.close();
+		con.close();
+	}
+	
+	public static void disConnext(PreparedStatement st, Connection con) throws Exception {
 		st.close();
 		con.close();
 	}
