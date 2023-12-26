@@ -10,6 +10,24 @@ import java.util.List;
 import com.winter.app.util.DBConnector;
 
 public class RegionDAO {
+	//Insert
+	public int add(RegionDTO regionDTO) throws Exception{
+		Connection con = DBConnector.getConnector();
+		
+		String sql = "INSERT INTO REGIONS VALUES(?,?)";
+		
+		PreparedStatement st = con.prepareStatement(sql);
+		
+		st.setInt(1, regionDTO.getRegion_id());
+		st.setString(2,regionDTO.getRegion_name());
+		
+		int result = st.executeUpdate();
+		
+		DBConnector.disConnext(st, con);
+		
+		return result;
+	}
+	
 	//getDetail, 지역번호로 지역이 조회
 	public RegionDTO getDetail(RegionDTO regionDTO) throws Exception {
 		Connection con = DBConnector.getConnector();

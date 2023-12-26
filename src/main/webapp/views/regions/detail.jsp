@@ -6,7 +6,7 @@
 	RegionDAO regionDAO = new RegionDAO();
 	RegionDTO regionDTO = new RegionDTO();
 	
-	String n = request.getParameter("region_id");//꺼내고 싶음 파라미터 키
+	String n = request.getParameter("region_id");//꺼내고 싶은 파라미터 키
 	int num = Integer.parseInt(n);
 	regionDTO.setRegion_id(num);
 	

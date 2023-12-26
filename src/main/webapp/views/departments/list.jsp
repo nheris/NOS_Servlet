@@ -5,7 +5,6 @@
     pageEncoding="UTF-8"%>
 <%
 	DepartmentDAO departmentDAO = new DepartmentDAO();
-	DepartmentDTO departmentDTO = new DepartmentDTO();
 	List<DepartmentDTO> ar = departmentDAO.getList();
 %>
 <!DOCTYPE html>
@@ -26,16 +25,18 @@
 			</tr>
 		</thead>
 		<tbody>
-			<% for(DepartmentDTO dapartmentDTO :ar){%>
+			<% for(DepartmentDTO departmentDTO :ar){%>
 				<tr>
-					<td><%= dapartmentDTO.getDepartment_id()%></td>
+					<td><%= departmentDTO.getDepartment_id()%></td>
 					<td><a href="./detail.jsp?department_name=<%= departmentDTO.getDepartment_name() %>"><%= departmentDTO.getDepartment_name()%></a></td>
-					<td><%= dapartmentDTO.getLocation_id()%></td>
-					<td><%= dapartmentDTO.getManager_id()%></td>
+					<td><%= departmentDTO.getLocation_id()%></td>
+					<td><%= departmentDTO.getManager_id()%></td>
 				</tr>
 			<% } %>
 		
 		</tbody>
 	</table>
+	
+	<a href="./add.jsp">추가</a>
 </body>
 </html>

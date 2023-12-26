@@ -5,6 +5,11 @@
 <%
 	RegionDAO regionDAO = new RegionDAO();
 	RegionDTO regionDTO = new RegionDTO();
+	String id = request.getParameter("region_id"); //파라미터값은 String
+	String name = request.getParameter("region_name");
+	
+	regionDTO.setRegion_id(Integer.parseInt(id));
+	regionDTO.setRegion_name(name);
 	
 	int result = regionDAO.add(regionDTO);
 %>
@@ -16,5 +21,17 @@
 </head>
 <body>
 	<h1>Add Process</h1>
+	
+	<script type="text/javascript">
+		/* 위에 result랑 다름 */
+		let result = '<%= result%>';
+		if(result>0){
+			alert('등록 성공')
+		}else{
+			alert('등록 실패')
+		}
+		/* window.생략가능 */
+		window.location.href="./list.jsp";
+	</script>
 </body>
 </html>

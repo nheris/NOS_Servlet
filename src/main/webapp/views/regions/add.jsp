@@ -9,7 +9,7 @@
 <body>
 	<h1>Regions Add</h1>
 	<form action="./addProcess.jsp">
-		<div> <!-- 테이블 컬럼명 멤버변수, 마라미터값 동일하게? -->
+		<div> <!-- 테이블 컬럼명, dto멤버변수, 마라미터값 동일하게? -->
 			대륙ID<input type="text" name="region_id" vlaue=>
 		</div>
 		<div>
