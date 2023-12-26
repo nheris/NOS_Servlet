@@ -10,6 +10,25 @@ import java.util.List;
 import com.winter.app.util.DBConnector;
 
 public class RegionDAO {
+	//update
+	public int update(RegionDTO regionDTO) throws Exception {
+		Connection con = DBConnector.getConnector();
+		
+		String sql = "UPDATE REGIONS SET REGION_NAME= ? WHERE REGION_ID=?";
+		
+		PreparedStatement st = con.prepareStatement(sql);
+		
+		st.setString(1, regionDTO.getRegion_name());
+		st.setInt(2, regionDTO.getRegion_id());
+		
+		int result = st.executeUpdate();
+		
+		DBConnector.disConnext(st, con);
+		
+		return result;
+	}
+	
+	
 	//Insert
 	public int add(RegionDTO regionDTO) throws Exception{
 		Connection con = DBConnector.getConnector();

@@ -9,13 +9,13 @@
 <body>
 	<h1>Regions Add</h1>
 	<form action="./addProcess.jsp">
-		<div> <!-- 테이블 컬럼명, dto멤버변수, 마라미터값 동일하게? -->
-			대륙ID<input type="text" name="region_id" vlaue=>
+		<div> <!-- 테이블 컬럼명, dto멤버변수, 마라미터값 동일하게? , 밑에 자체가 파라미터가 됨?-->
+			대륙ID<input type="text" name="region_id" value="0">
 		</div>
 		<div>
 			대륙명<input type="text" name="region_name">
 		</div>
-		<button type ="submit">추가</button>
+		<button>추가</button>
 	</form>
 </body>
 </html>
