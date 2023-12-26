@@ -21,7 +21,7 @@ public class RegionDAO {
 		st.setString(1, regionDTO.getRegion_name());
 		st.setInt(2, regionDTO.getRegion_id());
 		
-		int result = st.executeUpdate();
+		int result = st.executeUpdate(); //1 성공 0실
 		
 		DBConnector.disConnext(st, con);
 		
@@ -47,7 +47,7 @@ public class RegionDAO {
 		return result;
 	}
 	
-	//getDetail, 지역번호로 지역이 조회
+	//Detail, 지역번호로 지역이 조회
 	public RegionDTO getDetail(RegionDTO regionDTO) throws Exception {
 		Connection con = DBConnector.getConnector();
 		String sql = "SELECT * FROM REGIONS WHERE REGION_ID=?";

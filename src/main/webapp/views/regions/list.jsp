@@ -16,7 +16,7 @@
 </head>
 <body>
 	<h1>Regions List</h1>
-	<table>
+	<table border="1">
 		<thead>
 			<tr>
 				<th>REGION_ID</th>
