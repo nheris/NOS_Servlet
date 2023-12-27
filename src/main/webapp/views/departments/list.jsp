@@ -5,6 +5,7 @@
     pageEncoding="UTF-8"%>
 <%
 	DepartmentDAO departmentDAO = new DepartmentDAO();
+
 	List<DepartmentDTO> ar = departmentDAO.getList();
 %>
 <!DOCTYPE html>

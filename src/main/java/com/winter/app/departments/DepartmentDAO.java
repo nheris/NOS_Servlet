@@ -10,7 +10,7 @@ import com.winter.app.regions.RegionDTO;
 import com.winter.app.util.DBConnector;
 
 public class DepartmentDAO {
-	//getDetail, 부서번호로 부서정보 조회 ㅎ
+	//getDetail, 부서번호로 부서명 조회
 	public void getDetail(DepartmentDTO departmentDTO) throws Exception{
 		Connection con = DBConnector.getConnector();
 		
@@ -22,8 +22,6 @@ public class DepartmentDAO {
 		st.setString(2, departmentDTO.getDepartment_name());
 		st.setInt(3, departmentDTO.getManager_id());
 		st.setInt(4, departmentDTO.getLocation_id());
-		
-		
 		
 	}
 	

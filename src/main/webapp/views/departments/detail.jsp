@@ -5,7 +5,8 @@
 <%
 	DepartmentDAO departmentDAO = new DepartmentDAO();
 	DepartmentDTO departmentDTO = new DepartmentDTO();
-	
+	String str = request.getParameter("department_name");
+	departmentDTO.setDepartment_id(Integer.parseInt(str));  
 	
 	departmentDAO.getDetail(departmentDTO);
 %>
@@ -17,6 +18,6 @@
 </head>
 <body>
 	<h1>Department Detail</h1>
-	<h3></h3>
+	<h3><%= departmentDTO.getDepartment_name()%></h3>
 </body>
 </html>
