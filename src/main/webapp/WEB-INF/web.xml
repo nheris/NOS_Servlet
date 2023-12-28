@@ -4,13 +4,14 @@
 
 	<servlet>
 		<servlet-name>fc</servlet-name>
+		<!-- 톰캣이 이파일 먼저 읽음 -->
 		<!-- Tomcat이 생성하려는 클래스의 풀패키지명을 명시 -->
 		<!-- 톰캣에게 new FrontController 하라-->
 		<servlet-class>com.winter.app.controllers.FrontController</servlet-class>
 	</servlet>
 
-<!-- 	<servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>fc</servlet-name>
-		<url-pattern>/*</url-pattern>주소들어오면 fc실행??
-	</servlet-mapping> -->
+		<url-pattern>/*</url-pattern><!-- 주소들어오면 fc실행 -->
+	</servlet-mapping> 
 </web-app>

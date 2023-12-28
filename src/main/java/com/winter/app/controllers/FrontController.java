@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,33 +36,11 @@ public class FrontController extends HttpServlet {//HttpServlet:톰캣에서 받
 	 */
     //상속받은 메서드 오버라이딩
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		System.out.println("요청 발생");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/index.jsp");
+		view.forward(request, response);
 		
-		RegionDAO regionDAO = new RegionDAO();
-		try {
-			List<RegionDTO> ar = regionDAO.getList();
-			
-			PrintWriter out = response.getWriter(); //클라이언트ㅔㅇ게 보내는 소켓같은거??
-			//옛날방식 불편...
-			out.print("<h1>MyHome</h1>");
-			out.println("<table>");
-			for(RegionDTO regionDTO : ar) {
-				out.println("<tr>");
-				out.println("<td>");
-				out.println(regionDTO.getRegion_id());
-				out.println("</td>");
-				out.println("<td>");
-				out.println(regionDTO.getRegion_name());
-				out.println("</td>");
-				out.println("</tr>");
-			}
-			out.println("</table>");
-			
-			out.close();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+
 		
 	}
 
