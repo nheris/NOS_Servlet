@@ -31,6 +31,7 @@
 		<% for(RegionDTO regionDTO : ar){ %> 
 			<tr>    <!-- //표현식%= % ;안붙임-->
 				<td><%= regionDTO.getRegion_id()%></td>
+				<!-- .jsp -->
 				<td><a href="./detail?region_id=<%= regionDTO.getRegion_id() %>"><%= regionDTO.getRegion_name()%></a></td>
 			</tr>					
 		<%}%>
