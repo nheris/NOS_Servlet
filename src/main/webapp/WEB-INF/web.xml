@@ -2,16 +2,16 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>NOS_Servlet</display-name>
 
-	<servlet>
-		<servlet-name>fc</servlet-name>
+	<servlet><!-- 밑내용대로 객체 만들라 -->
+		<servlet-name>fc</servlet-name> <!-- 객체이름 -->
 		<!-- 톰캣이 이파일 먼저 읽음 -->
 		<!-- Tomcat이 생성하려는 클래스의 풀패키지명을 명시 -->
 		<!-- 톰캣에게 new FrontController 하라-->
 		<servlet-class>com.winter.app.controllers.FrontController</servlet-class>
 	</servlet>
 
-	<servlet-mapping>
+	<servlet-mapping> <!-- 언제 실행할건지 -->
 		<servlet-name>fc</servlet-name>
-		<url-pattern>/*</url-pattern><!-- 주소들어오면 fc실행 -->
+		<url-pattern>/</url-pattern><!-- 주소들어오면 fc실행 -->
 	</servlet-mapping> 
 </web-app>
