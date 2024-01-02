@@ -23,7 +23,7 @@ public class RegionDAO {
 		
 		int result = st.executeUpdate(); //1 성공 0실
 		
-		DBConnector.disConnext(st, con);
+		DBConnector.disConnect(st, con);
 		
 		return result;
 	}
@@ -42,7 +42,7 @@ public class RegionDAO {
 		
 		int result = st.executeUpdate();
 		
-		DBConnector.disConnext(st, con);
+		DBConnector.disConnect(st, con);
 		
 		return result;
 	}

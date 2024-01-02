@@ -10,7 +10,7 @@ public class DBConnector{
 	public static Connection getConnector() throws Exception {
 		String user = "user01";
 		String password = "user01";
-		String url = "jdbc:oracle:thin:@43.201.36.31:1521:xe";
+		String url = "jdbc:oracle:thin:@43.201.115.7:1521:xe";
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		
 		Class.forName(driver);
@@ -28,7 +28,7 @@ public class DBConnector{
 	}
 	
 	//INSERT, UPDATE, DELETE
-	public static void disConnext(PreparedStatement st, Connection con) throws Exception {
+	public static void disConnect(PreparedStatement st, Connection con) throws Exception {
 		st.close();
 		con.close();
 	}

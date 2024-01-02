@@ -16,7 +16,7 @@
 </head>
 <body>
 	<h1>Departments List</h1>
-	<table>
+	<table border=1>
 		<thead>
 			<tr>
 				<th>DEPARTMENT_ID</th>
@@ -29,7 +29,7 @@
 			<% for(DepartmentDTO departmentDTO :ar){%>
 				<tr>
 					<td><%= departmentDTO.getDepartment_id()%></td>
-					<td><a href="./detail.jsp?department_name=<%= departmentDTO.getDepartment_name() %>"><%= departmentDTO.getDepartment_name()%></a></td>
+					<td><a href="./detail.jsp?department_id=<%= departmentDTO.getDepartment_id() %>"><%= departmentDTO.getDepartment_name()%></a></td>
 					<td><%= departmentDTO.getLocation_id()%></td>
 					<td><%= departmentDTO.getManager_id()%></td>
 				</tr>
